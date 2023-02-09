@@ -22,4 +22,11 @@ using the cd  command in the shell.
 3-listfiles
 
 This script is listing the content(s) of 
-the current directory in a long format. 
+the current directory in a long format.
+
+..............................................
+
+4-listmorefiles
+
+list all the content(s) in a directory in a
+long format including hidden files and directories. 
