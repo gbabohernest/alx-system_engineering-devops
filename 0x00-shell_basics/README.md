@@ -1,2 +1,18 @@
-pwd -> is a script use to print the current working directory in the shell.
-ls -> is use to list the contents of your current directory in the shell. 
+0-working_directory
+
+This script is printing the current working 
+directory using the pwd command in the shell.
+ 
+..............................................
+
+1-listit
+
+Using the ls command in the shell, this script is 
+listing the content(s) of the current directory.
+
+................................................
+
+2-bring_me_home
+
+Changing directory to the user home directory 
+using the cd or cd~ command in the shell.
