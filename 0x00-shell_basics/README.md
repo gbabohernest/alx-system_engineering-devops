@@ -28,5 +28,13 @@ the current directory in a long format.
 
 4-listmorefiles
 
-list all the content(s) in a directory in a
-long format including hidden files and directories. 
+list all the content(s) of a directory in a
+long format including hidden files and directories.
+
+...................................................
+
+5-listfilesdigitonly
+
+This script is listing the content(s) of a directory 
+in a long format including hidden contents with
+user and group IDs. 
