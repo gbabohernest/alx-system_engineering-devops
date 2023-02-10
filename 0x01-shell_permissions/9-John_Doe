@@ -1,2 +1,2 @@
-#!/bind/bash
+#!/bin/bash
 chmod 763 hello
