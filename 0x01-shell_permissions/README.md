@@ -34,4 +34,11 @@ the UNIX System using the SHELL.
 
 5-execute
 
-This script is adding executible permission to the file hello  
+This script is adding executible permission to the file hello
+
+.................................................................
+
+Everybody 
+
+this script is changing the permission to the file hello givign
+it execute permission for all users.  
