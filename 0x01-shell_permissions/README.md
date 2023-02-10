@@ -41,4 +41,17 @@ This script is adding executible permission to the file hello
 Everybody 
 
 this script is changing the permission to the file hello givign
-it execute permission for all users.  
+it execute permission for all users.
+
+..................................................................
+
+James Bond 
+
+new permission fo no read nor permission .nor execute.
+
+-------------------------------------------------------------------
+
+
+John Doe
+
+modifield script in the sehello   
