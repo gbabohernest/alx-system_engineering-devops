@@ -28,4 +28,10 @@ change file owner to a new owner.
 4-empty
 
 the command use in this script is for creating and emtpy file in
-the UNIX System using the SHELL.  
+the UNIX System using the SHELL.
+
+.................................................................
+
+5-execute
+
+This script is adding executible permission to the file hello  
