@@ -21,4 +21,11 @@ is in; in a LINUX system using the SHELL.
 
 3-new_owner
 
-change file owner to a new owner.  
+change file owner to a new owner.
+
+.................................................................
+
+4-empty
+
+the command use in this script is for creating and emtpy file in
+the UNIX System using the SHELL.  
