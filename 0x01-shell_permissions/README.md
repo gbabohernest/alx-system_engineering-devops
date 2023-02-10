@@ -15,4 +15,10 @@ the current user ID in a linux shell.
 2-groups
 
 The command use in this script is for printing the groups a user
-is in; in a LINUX system using the SHELL.  
+is in; in a LINUX system using the SHELL.
+
+.................................................................
+
+3-new_owner
+
+change file owner to a new owner.  
