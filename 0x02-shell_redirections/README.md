@@ -16,4 +16,6 @@
 
 8.Save current state of directory: a script that writes into the file ls_cwd_content the result of the command ls -la
 
-9.Duplicate last line: Write a script that duplicates the last line of the file iacta. 
+9.Duplicate last line: Write a script that duplicates the last line of the file iacta.
+
+10.No more javascript: Wrtie a script that deletes all regular files with .js extension in current and all its subfolders.  
