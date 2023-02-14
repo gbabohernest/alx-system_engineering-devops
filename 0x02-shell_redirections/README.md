@@ -20,4 +20,6 @@
 
 10.No more javascript: Wrtie a script that deletes all regular files with .js extension in current and all its subfolders.
 
-11.Don't just count your directories, make your directories count: write a script that counts the number of directories & sub-directories in current directory  
+11.Don't just count your directories, make your directories count: write a script that counts the number of directories & sub-directories in current directory
+
+12.What's new: create a script that displays the 10 newest files in the current directory.  
