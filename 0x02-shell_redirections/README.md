@@ -22,4 +22,6 @@
 
 11.Don't just count your directories, make your directories count: write a script that counts the number of directories & sub-directories in current directory
 
-12.What's new: create a script that displays the 10 newest files in the current directory.  
+12.What's new: create a script that displays the 10 newest files in the current directory.
+
+13.Being unique is better than being perfect: script that takes a list of words as input and prints only words that appear exactly once.  
