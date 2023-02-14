@@ -40,4 +40,6 @@
 
 20.Without C, you would live in hiago: create a script that removes all letters c and C from input.
 
-21. esreveR: Write a script that reverse its input  
+21.esreveR: Write a script that reverse its input
+
+22.DJ Cut Killer: Write a script that displays all users and their home directories, sorted by users.   
