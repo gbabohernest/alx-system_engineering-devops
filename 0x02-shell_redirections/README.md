@@ -24,4 +24,6 @@
 
 12.What's new: create a script that displays the 10 newest files in the current directory.
 
-13.Being unique is better than being perfect: script that takes a list of words as input and prints only words that appear exactly once.  
+13.Being unique is better than being perfect: script that takes a list of words as input and prints only words that appear exactly once.
+
+14.It must be that file: Display lines containing the pattern 'root' from the file /etc/passwd  
