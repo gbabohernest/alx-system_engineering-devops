@@ -20,4 +20,6 @@
 
 9.Divide and rule - write a script that prints the result of POWER divided by the DIVIDE
 
-10.Love : display the result of Breath to the power Love 
+10.Love : display the result of Breath to the power Love
+
+11.Converts a number from base 2 to base 10 
