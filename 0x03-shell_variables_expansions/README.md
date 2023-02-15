@@ -12,4 +12,6 @@
 
 5.Local variables: script that list all local, environment variables and functions.
 
-6.Local variable : create a new local variable 
+6.Local variable : create a new local variable
+
+7.Global variable : create a new global variable 
