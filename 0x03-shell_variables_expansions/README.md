@@ -28,4 +28,10 @@
 
 13.Floats
 
-14.Decimal to Hexadecimal 
+14.Decimal to Hexadecimal. 
+
+15.Strong encryption
+
+16.odd number
+
+17.Just add water and stir 
