@@ -24,4 +24,6 @@
 
 11.Converts a number from base 2 to base 10
 
-12.Combination : create a script that prints all possible combination of two letters, expect oo. 
+12.Combination : create a script that prints all possible combination of two letters, expect oo.
+
+13.Floats 
