@@ -8,4 +8,6 @@
 
 3.Create a script that counts the number of directories in the PATH.
 
-4.Global variables: script that lists environment variables. 
+4.Global variables: script that lists environment variables.
+
+5.Local variables: script that list all local, environment variables and functions. 
