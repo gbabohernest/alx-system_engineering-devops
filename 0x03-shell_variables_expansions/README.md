@@ -14,4 +14,10 @@
 
 6.Local variable : create a new local variable
 
-7.Global variable : create a new global variable 
+7.Global variable : create a new global variable
+
+8.Addition of 128 to the value stored in variable TRUEKNOWLEDGE
+
+9.Divide and rule - write a script that prints the result of POWER divided by the DIVIDE
+
+10.Love : display the result of Breath to the power Love 
