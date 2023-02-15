@@ -26,4 +26,6 @@
 
 12.Combination : create a script that prints all possible combination of two letters, expect oo.
 
-13.Floats 
+13.Floats
+
+14.Decimal to Hexadecimal 
