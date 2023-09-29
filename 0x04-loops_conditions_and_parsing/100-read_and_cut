@@ -3,7 +3,9 @@
 
 while IFS= read -r line
 do
-    username=$(echo "$line" | cut -d ":" -f1)
-    user_id=$(echo "$line" | cut -d ":" -f4)
-    home_directory=$(echo "$line" | cut -d ":" -f6)
+    # Extracting the fields, but not storing them in variables.
+    echo "Username: $(echo "$line" | cut -d ":" -f1)"
+    echo "User ID: $(echo "$line" | cut -d ":" -f4)"
+    echo "Home Directory: $(echo "$line" | cut -d ":" -f6)"
+
 done < "/etc/passwd"
