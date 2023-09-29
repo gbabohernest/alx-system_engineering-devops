@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script create a file containing its PID, displays
+#  To infinity and beyond, handles SIGTERM, SIGINT SIGQUIT
+
+pid_file="/var/run/myscript.pid"
+
+trap 'echo "I hate the kill command"; rm -f $pid_file; exit' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'rm -f "$pid_file"; exit' SIGQUIT
+
+echo $$ > "$pid_file"
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
