@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script display "To infinity and beyound"
+#  indefinitely
+
+while [ True ]
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
