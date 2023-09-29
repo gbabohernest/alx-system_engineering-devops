@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script display the content of
+# the current directory in a list format.
+# Displays only the part of the name after the first dash.
+
+
+for item in *
+do
+  	# Check if the item is a file
+  	# not a directory and not hidden
+  	if [ -f "$item" ] && [[ "$item" != .* ]]
+	then
+    		# Use 'cut' to extract the part
+		# of the name after the first dash
+    		name=$(echo "$item" | cut -d '-' -f2-)
+    		echo "$name"
+  	fi
+done
