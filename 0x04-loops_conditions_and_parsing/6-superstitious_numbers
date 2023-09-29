@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# This script is diplaying numbers from 1 - 20.
+# At the 4th iteration, display "bad luck from China"
+# At the 9th iteration, display "bad luck from Japen"
+# At the 17th iteration, display "bad luck from Italy"
+
+count=1
+
+while [ $count -le 20 ]
+do
+	case $count in
+		4)
+			echo "4"
+			echo "bad luck from China"
+			;;
+		9)
+			echo "9"
+			echo "bad luck from Japan"
+			;;
+		17)
+			echo "17"
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "$count"
+			;;
+	esac
+	count=$((count + 1))
+done
