@@ -29,7 +29,7 @@
 
 **7. Clock**
 
-**8. For ls **
+**8. For ls**
 
 **9. To file, or not to file**
 
