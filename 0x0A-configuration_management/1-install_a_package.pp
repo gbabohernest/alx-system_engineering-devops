@@ -1,6 +1,5 @@
-# Install Flask verion 2.1.0 using pip3
-
+# Install flask verion 2.1.0 from pip3
 package { 'flask':
-  ensure   => '2.1.0',
+  enure    => '2.1.0',
   provider => 'pip3',
 }
