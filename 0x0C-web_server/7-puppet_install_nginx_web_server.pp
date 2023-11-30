@@ -1,22 +1,27 @@
 # A puppet manifest that install Nginx web server
 
-# Install Nginx
 package { 'nginx':
-  ensure => installed,
-}
-
-file_line { 'install':
   ensure => 'present',
-  path   => '/etc/nginx/sites-enabled/default',
-  after  => 'listen 80 default_server; ',
-  line   => 'rewrite ^/redirect_me https://www.frontendmentor.io/profile/gbabohernest permanent; ',
 }
 
-file { '/var/www/html/':
-  content => 'Hello World!',
+exec { 'install':
+  command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+  provider => shell,
+
 }
 
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
+exec { 'Hello':
+  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
+  provider => shell,
+}
+
+exec { 'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation \/redirect_me
+       {\\n\\t\\treturn 301 https:\/\/www.frontendmentor.io/profile/gbabohernest\/;\\n\\t}/"
+       /etc/nginx/sites-available/default':
+  provider => shell,
+}
+
+exec { 'run':
+  command  => 'sudo service nginx restart',
+  provider => shell,
 }
