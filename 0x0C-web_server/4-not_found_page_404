@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# configure a nginx server to have a custom 404 page
+# that contains the string Ceci n'est pas une page.
+
+NGINX_CONF="/etc/nginx/sites-available/default"
+HTML_DIR="/etc/nginx/html"
+
+apt-get update
+apt-get install -y nginx
+
+mkdir -p $HTML_DIR
+touch $HTML_DIR/index.html
+
+echo "Hello World!" > $HTML_DIR/index.html
+
+touch /etc/nginx/var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+printf %s "server {
+    listen        80 default_server;
+    listen        [::]:80 default_server;
+    root          $HTML_DIR;
+    index         index.html index.htm;
+
+    location /redirect_me {
+        return 301 https://www.frontendmentor.io/profile/gbabohernest;
+    }
+
+    error_page 404 /404.html;
+    location /404 {
+        root /etc/var/www/html;
+        internal;
+    }
+}
+" > $NGINX_CONF
+
+service nginx restart
