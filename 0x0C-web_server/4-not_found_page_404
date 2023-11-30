@@ -13,9 +13,6 @@ touch $HTML_DIR/index.html
 
 echo "Hello World!" > $HTML_DIR/index.html
 
-touch /etc/nginx/var/www/html/404.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-
 printf %s "server {
     listen        80 default_server;
     listen        [::]:80 default_server;
@@ -26,12 +23,13 @@ printf %s "server {
         return 301 https://www.frontendmentor.io/profile/gbabohernest;
     }
 
-    error_page 404 /404.html;
-    location /404 {
-        root /etc/var/www/html;
+    location = /404.html {
         internal;
     }
 }
-" > $NGINX_CONF
+" | sudo tee $NGINX_CONF > /dev/null
 
-service nginx restart
+sudo sed -i "s/#error_page 404/error_page 404/" $NGINX_CONF
+sudo touch /var/www/html/404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html > /dev/null
+sudo service nginx restart
