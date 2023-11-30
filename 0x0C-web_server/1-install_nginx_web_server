@@ -1,6 +1,22 @@
 #!/usr/bin/env bash
 # install nginx and configures it to listen on port 80  and querying return
-apt-get -y update
-apt-get -y install nginx
-echo "Hello World!" > /var/www/html/index.html
-service nginx start
+
+NGINX_CONF="/etc/nginx/sites-available/default"
+HTML_DIR="/etc/nginx/html"
+
+apt-get update
+apt-get install -y nginx
+
+mkdir -p $HTML_DIR
+touch $HTML_DIR/index.html
+
+echo "Hello World!" > $HTML_DIR/index.html
+printf %s "server {
+    listen        80 default_server;
+    listen        [::]:80 default_server;
+    root          $HTML_DIR;
+    index         index.html index.htm;
+}
+" > $NGINX_CONF
+
+service nginx restart
