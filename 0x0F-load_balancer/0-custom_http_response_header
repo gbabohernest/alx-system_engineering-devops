@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Installs Nginx server and configures with the following:
+# Listens on port 80
+# create a permanent redirect
+# create a custom index.html page
+# create a custom 404 page that contains the string Ceci n'est pas une page.
+# create a custom HTT header name X-Served-By with the value of the hostname as the running server
+
+NGINX_CONF="/etc/nginx/sites-available/default"
+HTML_DIR="/var/www/html"
+
+sudo apt-get update
+sudo apt-get install -y nginx
+
+mkdir -p $HTML_DIR
+echo "Hello World!" > $HTML_DIR/index.html
+
+# Set up the Nginx configuration
+printf "%s\n" "server {
+    listen        80 default_server;
+    listen        [::]:80 default_server;
+    add_header    X-Served-By  $HOSTNAME;
+    root          $HTML_DIR;
+    index         index.html index.htm;
+
+    location /redirect_me {
+        return 301 https://www.frontendmentor.io/profile/gbabohernest;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+        root $HTML_DIR;
+        internal;
+    }
+}" | sudo tee $NGINX_CONF > /dev/null
+
+# 404 page creation
+echo "Ceci n'est pas une page" | sudo tee $HTML_DIR/404.html > /dev/null
+
+sudo service nginx restart
