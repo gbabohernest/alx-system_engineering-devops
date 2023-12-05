@@ -18,8 +18,8 @@ frontend my_frontend
 
 backend my_backend
     balance roundrobin
-    server 232310-web-01 54.146.86.193 check
-    server 232310-web-02 54.209.169.142 check
+    server 232310-web-01 54.146.86.193:80 check
+    server 232310-web-02 54.209.169.142:80 check
 "
 echo "$haproxy_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
