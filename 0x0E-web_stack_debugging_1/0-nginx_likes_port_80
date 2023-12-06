@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Description: Debugs and configures Nginx to listen on port 80 by addressing
+#              the issue where sites-available/default is unlinked to
+#              sites-enabled/default. Restarts Nginx after making changes.
+
+
+# Stop Nginx if it's running
+service nginx stop
+
+# Remove the smybolic link if it exits
+if [ -h /etc/nginx/sites-enabled/default ]; then
+    rm /etc/nginx/sites-enabled/default
+fi
+
+# Create a smybolic link from sites-available to sites-enabled
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+# Start Nginx 
+service nginx start
