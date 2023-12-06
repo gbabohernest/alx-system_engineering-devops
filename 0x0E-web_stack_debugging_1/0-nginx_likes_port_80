@@ -8,9 +8,10 @@
 service nginx stop
 
 # Remove the smybolic link if it exits
-if [ -h /etc/nginx/sites-enabled/default ]; then
-    rm /etc/nginx/sites-enabled/default
-fi
+# if [ -h /etc/nginx/sites-enabled/default ]; then
+#    rm /etc/nginx/sites-enabled/default
+# fi
+rm /etc/nginx/sites-enabled/default
 
 # Create a smybolic link from sites-available to sites-enabled
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
