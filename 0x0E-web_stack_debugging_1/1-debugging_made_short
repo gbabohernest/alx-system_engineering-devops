@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Debugs error, make Nginx to listen on port 80, address issue where sites-available/default is unlinked to sites-enabled/default.
+grep -q 'sites-enabled/default' /etc/nginx/nginx.conf || sed -i '/sites-enabled\/default/s/^#//g' /etc/nginx/nginx.conf
+nginx -t
+nginx -s reload
