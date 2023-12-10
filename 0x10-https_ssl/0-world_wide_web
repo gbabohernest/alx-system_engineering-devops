@@ -1,7 +1,5 @@
-#!usr/bin/env bash
-# A script that display information about subdomains.
-
-# Function to print record type and destination of subdomains
+#!/usr/bin/env bash
+# A script to print record type and destination of subdomains
 print_subdomain() {
     local domain="$1"
     local subdomain="$2"
