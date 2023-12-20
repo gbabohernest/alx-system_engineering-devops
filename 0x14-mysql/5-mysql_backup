@@ -5,5 +5,9 @@ dump_file="backup.sql"
 archive_name="$(date +'%d-%m-%Y').tar.gz"
 mysql_password="$1"
 
+# Perform MySQL dump
 mysqldump -uroot -p"$mysql_password" --all-databases > "$dump_file"
-tar -cz "$archive_name" "$dump_file"
+
+# Create a compressed archive
+tar -czf "$archive_name" "$dump_file"
+
