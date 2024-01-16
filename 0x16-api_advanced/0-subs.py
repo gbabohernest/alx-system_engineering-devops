@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a function that quires the Reddit API
+"""
+    Defines a function that quires the Reddit API
     Returns:
             the number of subscribers(not active users,
                                       total subscribers)
@@ -11,11 +12,13 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """Queries the Reddit API
+    """
+       Queries the Reddit API
        returns the number of subscribers for a given reddit
     """
-    url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
-    headers = {"user-agent": "user"}
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:97.0)"
+                             "Gecko/20100101 Firefox/97.0"}
 
     response = requests.get(url, headers=headers,
                             allow_redirects=False)
