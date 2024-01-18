@@ -2,5 +2,5 @@
 
 exec { 'fix_apache_issue':
   command => 'sed -i s/phpp/php/g /var/www/html/wp-setting.php',
-  path    => '/usr/local/bin:/bin/'
+  path    => ['/bin','/usr/bin']
 }
