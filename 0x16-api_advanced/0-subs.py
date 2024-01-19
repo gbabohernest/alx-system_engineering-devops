@@ -16,7 +16,7 @@ def number_of_subscribers(subreddit):
         Queries the Reddit API
         returns the number of subscribers for a given reddit
     """
-    if subreddit is not None or isinstance(subreddit, str):
+    if subreddit is not None and isinstance(subreddit, str):
 
         url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
         headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:97.0)"
@@ -39,3 +39,6 @@ def number_of_subscribers(subreddit):
 
         except Exception:
             return 0
+
+    else:
+        return 0
